@@ -6,12 +6,13 @@ class Duck(ABC):
         self.fly_behaviour = None
         self.quack_behaviour = None
 
-    def swim(self):
-        return "all ducks swim"
+    @staticmethod
+    def swim():
+        return "all ducks can swim"
 
     @abstractmethod
     def display(self):
-        return NotImplemented
+        raise NotImplemented
 
     def perform_quack(self):
         return self.quack_behaviour.quack()
@@ -28,7 +29,7 @@ class Duck(ABC):
 
 class FlyBehaviour:
     def fly(self):
-        return NotImplemented
+        raise NotImplemented
 
 
 class QuackBehaviour:
@@ -65,4 +66,4 @@ ml = MallardDuck()
 print(ml.perform_fly())
 ml.perform_quack()
 ml.set_fly_behaviour(FlyRocket())
-print(ml.perform_fly())
+print(ml.perform_fly(), ml.display())
