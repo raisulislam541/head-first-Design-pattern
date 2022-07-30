@@ -27,12 +27,14 @@ class Duck(ABC):
         self.quack_behaviour = quack_behaviour
 
 
-class FlyBehaviour:
+class FlyBehaviour(ABC):
+    @abstractmethod
     def fly(self):
         raise NotImplemented
 
 
-class QuackBehaviour:
+class QuackBehaviour(ABC):
+    @abstractmethod
     def quack(self):
         raise NotImplemented
 
