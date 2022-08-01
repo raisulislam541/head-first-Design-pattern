@@ -15,4 +15,8 @@ class Subject(ABC):
     def notify_observers(self):
         raise "not implemented"
 
+class Observer(ABC):
+
+
+
 
