@@ -15,7 +15,13 @@ class Subject(ABC):
     def notify_observers(self):
         raise "not implemented"
 
+
 class Observer(ABC):
+    def __init__(self):
+        self.temperature = None
+        self.humidity = None
+        self.weather_data = None
+
 
 
 
