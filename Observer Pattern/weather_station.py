@@ -20,7 +20,11 @@ class Observer(ABC):
     def __init__(self):
         self.temperature = None
         self.humidity = None
-        self.weather_data = None
+        self.pressure = None
+
+    @abstractmethod
+    def update(self):
+        raise "not implemented"
 
 
 
