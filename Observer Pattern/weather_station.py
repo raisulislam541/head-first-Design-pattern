@@ -27,6 +27,13 @@ class Observer(ABC):
         raise "not implemented"
 
 
+class DisplayElement(ABC):
+
+    @abstractmethod
+    def display(self):
+        raise "not implemented"
+
+
 
 
 
